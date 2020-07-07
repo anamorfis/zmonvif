@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "zmonvif-events",
+        "scope": null,
+        "escapedName": "zmonvif-events",
+        "name": "zmonvif-events",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/usr/local"
+    ]
+  ],
+  "_from": "zmonvif-events@latest",
+  "_id": "zmonvif-events@1.0.2",
+  "_inCache": true,
+  "_location": "/zmonvif-events",
+  "_nodeVersion": "9.4.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/zmonvif-events_1.0.2_1524653879487_0.9664263968405526"
+  },
+  "_npmUser": {
+    "name": "nickw444",
+    "email": "nick@nickwhyte.com"
+  },
+  "_npmVersion": "5.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "zmonvif-events",
+    "scope": null,
+    "escapedName": "zmonvif-events",
+    "name": "zmonvif-events",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/zmonvif-events/-/zmonvif-events-1.0.2.tgz",
+  "_shasum": "a140d1059d046567a947abb1abcc1a50c9d90029",
+  "_shrinkwrap": null,
+  "_spec": "zmonvif-events",
+  "_where": "/usr/local",
+  "bin": {
+    "zmonvif-events": "./zmonvif-events.js"
+  },
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "node-fetch": "^2.1.2",
+    "onvif": "git+https://github.com/nickw444/onvif.git"
+  },
+  "description": "A JS CLI tool that attempts to bridge the gap between your ONVIF camera's motion detection and Zoneminder.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-lx97Lq/XmLGXVoJr4SYhEIguC5Foxfi3H3D/ilAFss2CkCxiL43UDHroHcUzQ4w6U6T8DGVIz0jcENyO1Fnvpw==",
+    "shasum": "a140d1059d046567a947abb1abcc1a50c9d90029",
+    "tarball": "https://registry.npmjs.org/zmonvif-events/-/zmonvif-events-1.0.2.tgz",
+    "fileCount": 4,
+    "unpackedSize": 6877,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa4F84CRA9TVsSAnZWagAARJIP/2spiY+KnVZEWTWXhtPe\nfUR9zEWAzFnb60x5f1WaLeEbGejY6/S2pmGUCyA0YNUZ4QZQj3YxNAfpwmOI\nsMffTOhAwnPcKSys1i3KiBKf8jzc8pI9nwEqUKS4siOyAUfWULUlR0Zaan1i\nc7ESHAmKBsjZlGtfZvRHxnvoEps/kFfantPcLnalTQsJtdFFntZplLrOA5Xu\nhQjzS+8nkOgHX66ziggP78NrYCTy6qLHPx7PVRQvl2V0BWlGMIQqMmygsSm0\n2opCZkJ+FtLjK2fK6IgGmjnqmHGDHSQIFO64/Xnpk1YMGihR0GS9/SAZvRx6\nx4DKW+evO4pkquymUOivJ1fxtXTf4eTL9JfXD/9R+G1+acqAiUFsVXthqwNo\nHI/7/letmK4lrkFp4CViWX85ztRGDLhyAEdpF+lkBinOHfIi7g6BC6KQn3Hp\nfVGaL0cJVq6cfrHQkz/edXpOOL4UgpaakE4Tz7W7eZ1FbnCW5lxz7n9uF44F\n5Bx0jhvaaCLlck8dSeGB9tSTU+X6PTgn4A9Km2blkjwwVYWo62kHqgTrHksN\nzjP+aVgQXyDWRQzKZ5H3HSvLMFbjWRzXOTWSZnem2d9pzjanxq9AYfMgp2J2\nfffNUa/qv1zGX20JMtFmo+DHAmEm5cdD3v9jajGY9T++DW56braEjnjQGp62\ntv7o\r\n=hzWK\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "gitHead": "332eaf4f37d7e8a33891e130b1725594ca59d5f3",
+  "homepage": "https://github.com/nickw444/zmonvif-events",
+  "keywords": [
+    "onvif",
+    "video",
+    "NVR",
+    "zoneminder",
+    "PTZ",
+    "RTSP"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "nickw444",
+      "email": "nick@nickwhyte.com"
+    }
+  ],
+  "name": "zmonvif-events",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.2"
+}

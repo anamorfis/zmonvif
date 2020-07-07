@@ -1,0 +1,66 @@
+--- /usr/lib/node_modules/zmonvif-events/zmonvif-events.js	2018-04-25 14:46:41.000000000 +0400
++++ ./zmonvif/zmonvif-events.js	2020-07-07 16:46:10.872486448 +0400
+@@ -1,4 +1,9 @@
+-#!/usr/bin/env node
++#!/usr/local/bin/node
++process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0
++
++const zmuser = '';
++const zmpass = '';
++
+ 
+ const {Cam} = require('onvif');
+ const fetch = require('node-fetch');
+@@ -15,10 +20,15 @@
+    * @param {boolean} state
+    */
+   setAlarm(monitorId, state) {
+-    console.log(`Setting monitor ${monitorId} to state ${state}`);
++    const date = new Date().toLocaleString();
++    console.log(`[${date}] Setting monitor ${monitorId} to state ${state}`);
+     const cmd = state ? 'on' : 'off';
+     const url = `${this.basePath}api/monitors/alarm/id:${monitorId}/command:${cmd}.json`;
+-    return fetch(url);
++    return fetch(url, {
++        method: 'POST',
++        body: 'user=' + zmuser + '&pass=' + zmpass,
++        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
++        });
+   }
+ }
+ 
+@@ -67,11 +77,12 @@
+     })
+   }
+ 
+-  static async create({id, hostname, username, password}, zoneminder) {
++  static async create({id, hostname, username, password, port}, zoneminder) {
+     const cam = await this.createCamera({
+       hostname,
+       username,
+-      password
++      password,
++      port
+     });
+     return new Monitor(id, cam, zoneminder);
+   }
+@@ -83,7 +94,8 @@
+     id: args.zm_monitor_id,
+     hostname: args.hostname,
+     username: args.username,
+-    password: args.password
++    password: args.password,
++    port: args.port
+   }, zoneminder);
+   monitor.start();
+ }
+@@ -113,6 +125,9 @@
+   parser.addArgument(['-p', '--password'], {
+     help: 'password for the ONVIF camera'
+   });
++  parser.addArgument(['-o', '--port'], {
++    help: 'port for the ONVIF camera'
++  });
+   const args = parser.parseArgs();
+ 
+   start(args);

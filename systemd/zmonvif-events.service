@@ -1,0 +1,24 @@
+[Unit]
+Description=A JS CLI tool that attempts to bridge the gap between your ONVIF camera's motion detection and Zoneminder.
+After=zoneminder.service
+Requires=zoneminder.service
+
+[Service]
+Environment=IPCAM=
+Environment=CAMUSER=
+Environment=CAMPASS=
+Environment=ZMURL=
+Environment=ZMMONITOR=
+Environment=CAMPORT=
+
+
+ExecStart=/usr/local/bin/zmonvif-events --hostname ${IPCAM} --username ${CAMUSER} --password ${CAMPASS} -z ${ZMURL} -i ${ZMMONITOR} --port ${CAMPORT}
+User=nobody
+Group=nobody
+Restart=always
+RestartSec=100ms
+TimeoutSec=100ms
+
+
+[Install]
+WantedBy=multi-user.target
