@@ -27,7 +27,6 @@ n 8
 const zmuser = ''; 
 const zmpass = '';
 ```
-
 2. Systemd юнит для запуска сервиса, который будет взаимодействовать с камерой:
 ```
 Environment=IPCAM=        # адрес IP-камеры
@@ -41,6 +40,8 @@ Environment=CAMPORT=      # порт на котором камера слуша
 
 # Запуск
 Редактируем systemd юнит, копируем/перемещаем/делаем сим-линк в `/etc/systemd/system` и запускаем, например:
+
+
 1. юнит: `/etc/systemd/system/zmonvif-7` где 7 это номер монитора 
 2. `systemctl enable --now zmonvif-7` включает автозапуск и сразу запускает сервис
 
