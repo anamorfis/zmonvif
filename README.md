@@ -42,10 +42,11 @@ Environment=CAMPORT=      # порт на котором камера слуша
 Редактируем systemd юнит, копируем/перемещаем/делаем сим-линк в `/etc/systemd/system` и запускаем, например:
 
 
-1. юнит: `/etc/systemd/system/zmonvif-7` где 7 это номер монитора 
+1. юнит: `/etc/systemd/system/zmonvif-7.service` где 7 это номер монитора 
 2. `systemctl enable --now zmonvif-7` включает автозапуск и сразу запускает сервис
 
 
+Источник: https://www.npmjs.com/package/zmonvif-events
 
 # zmonvif-events
 
